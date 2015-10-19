@@ -50,7 +50,7 @@ public class InvokeMethod {
 		  
 		  final JSONObject objectOut = new JSONObject();
 		  
-		  objectOut.put("context", objectIn.get("context").toString());
+		  objectOut.put(Constants.CONTEXT, objectIn.get("context").toString());
 		
 		  
 		  if(objectIn.has("active")) {
@@ -110,6 +110,7 @@ public class InvokeMethod {
 
 		  } else {
 			  objectOut.put(Constants.RETURN_CODE, Constants.CODE_OK);
+			  objectOut.put(Constants.RETURN_VALUE, Constants.VALUE_OK);
 			  objectOut.put(Constants.RETURN_MSG, "Method "+method+" with status INACTIVE");
 		  }
 		  
